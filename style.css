@@ -1,0 +1,137 @@
+html, body{
+    height: 100%;   
+    color:#fba942
+}
+
+#backgroundPic{
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    opacity: 1;
+    width: 153vw;  
+    height: 150vh; 
+    object-fit: cover; 
+    z-index: -1;   
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    width: 39%;
+    min-width: 150px;
+    height: 100vh;
+    margin-left: 30%;
+}
+
+.gameInstructions{
+    width: 100%;
+    font-size: 3vw;
+    padding-left: 13%;
+
+}
+#displayScore{
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;  
+    height: 10vh;
+    width: 37.8vw;
+    min-width: 70px; 
+    margin-bottom: 20px;
+    margin-left: 3%;
+    border: 2px solid orange;
+}
+
+.gameStatus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 0%;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+/*animation for correct guesses*/
+@keyframes celebration {
+    0% { transform: scale(1); color: green; }
+    50% { transform: scale(1.3); color: gold; }
+    100% { transform: scale(1); color: green; }
+}
+.celebration{
+    animation: celebration 0.6s ease-in-out;
+    font-size: 17px;
+}
+
+/*animation for incorrect guesses*/
+@keyframes fade-out{
+    0%{opacity: 1; color: red;}
+    100%{opacity: 0; color: red;}
+}
+
+.fade-out{
+    animation: fade-out 0.5s infinite alternate;   
+}
+
+.colorBoxContainer{
+    display: flex;
+    justify-content: center;
+    width: 37.8vw; 
+    min-width: 80%;
+    height: 20vh;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 4px;   
+}
+
+.colorBoxDisplay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px; 
+    min-width: 200px;
+    width: 80%;
+    height: auto;
+    border-radius: 50px;      
+    border: 5px solid #100d06; 
+}
+
+.colorOptions{
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    grid-template-columns: repeat(3, minmax(80px, 1fr)); 
+    grid-template-rows: repeat(2, minmax(50px, auto));
+    column-gap: clamp(1px,2vw, 20px);
+    row-gap: clamp(5px, 2vw, 20px);
+    margin-bottom: 30px;
+    margin-left: 0%; 
+    padding-left:5%; 
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .colorOptions {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+}
+
+ .colorChoice{
+    width: 8vw;
+    min-width: 80px;
+    height: 10vh; 
+} 
+
+.newGameButtonContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#newGameButton{
+    background-color: #C56C47;
+    color: #FAE5D3;
+    width: 20vw;
+    height: 7vh;
+    margin-left: 5vw;
+}
