@@ -3,6 +3,14 @@ html, body{
     color:#fba942
 }
 
+#time {
+    margin-top: 5px;
+    left: 340px;
+    color: solid orange;
+    font-size: 16px;
+
+}
+
 #backgroundPic{
     position: fixed; 
     top: 0;
